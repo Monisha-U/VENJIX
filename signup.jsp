@@ -12,19 +12,16 @@
 <body>
 <center>
 <%
-String uname = request.getParameter("rusername");
 String passwd = request.getParameter("rpassword");
 Connection conn = null;
 try{
 	String url = "jdbc:mysql://localhost:3306/bloodbank?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false";
-	String username = "root";
 	String password = "";
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	conn = DriverManager.getConnection(url,username,password);
-	String sql="insert into logindetails(username,password)values(?,?)";
+	conn = DriverManager.getConnection(url,password);
+	String sql="insert into logindetails(password)values(?,?)";
     PreparedStatement preparestatement=conn.prepareStatement(sql);
-    preparestatement.setString(1,uname);
-    preparestatement.setString(2,passwd);
+        preparestatement.setString(2,passwd);
     preparestatement.execute();
     out.println("Register Successful!");
     response.sendRedirect("index.html");
