@@ -20,6 +20,7 @@ Contact:<input type="number" name="contact" /><br><br>
 <input type="submit" value="Submit" />
 <input type="reset" value="Cancel" />
 </form><br><br>
+<a href="menu.html">Go Back To Menu</a>
 </center>
 </body>
 </html>
