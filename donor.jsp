@@ -5,7 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Donor</title>	
+	<title>Donor</title>
+	<header style="font-size:50px" align="center">Blood Bank Management System</header>
+	
 </head>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <body>
@@ -13,7 +15,45 @@
 <center>
 
 <form method="post" action="donoraction.jsp">
+Name:<input type="text" name="donorname" /><br><br>
+Gender:<input type="text" name="gender" /><br><br>
+Address:<input type="text" name="address" /><br><br>
+Date:<input type="date" name="date" /><br><br>
 Contact:<input type="number" name="contact" /><br><br>
+Qunatity(ml):<input type="number" name="quantity" /><br><br>
+Blood Group:
+<select name="bg">
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB-</option>
+<option>AB+</option>
+<option>O-</option>
+<option>O+</option>
+</select><br><br>
+<%
+ResultSet doctorid=null;
+try{
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+java.sql.Connection con = DriverManager.getConnection
+("jdbc:mysql://localhost:3306/bloodbank?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false","root","");
+Statement fetchdoctorname=con.createStatement() ;
+doctorid=fetchdoctorname.executeQuery("select id from doctor");
+%>
+Select Doctor id:
+<select name="docidlist">
+<%  while(doctorid.next()){ %>
+<option><%= doctorid.getString(1)%></option>
+<% } %>
+</select><br><br>
+<%
+}
+catch(Exception e)
+{
+out.println(e);
+}
+%>
 
 <input type="submit" value="Submit" />
 <input type="reset" value="Cancel" />
