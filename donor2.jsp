@@ -17,6 +17,16 @@
 <form method="get" action="donoraction.jsp">
 
 Date:<input type="date" name="date" /><br><br>
+Blood Group:
+<select name="bg">
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB-</option>
+<option>AB+</option>
+<option>O-</option>
+<option>O+</option>
 
 </form>
 
