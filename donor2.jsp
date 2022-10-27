@@ -15,6 +15,7 @@
 <center>
 
 <form method="get" action="donoraction.jsp">
+Name:<input type="text" name="donorname" /><br><br>
 Gender:<input type="text" name="gender"/><br><br>
 Date:<input type="date" name="date" /><br><br>
 Quantity(ml):<input type="number" name="quantity" /><br><br>
