@@ -15,7 +15,7 @@
 <center>
 
 <form method="get" action="donoraction.jsp">
-
+Gender:<input type="text" name="gender"/><br><br>
 Date:<input type="date" name="date" /><br><br>
 Quantity(ml):<input type="number" name="quantity" /><br><br>
 Blood Group:
