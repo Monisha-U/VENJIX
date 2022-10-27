@@ -40,7 +40,19 @@ catch(SQLException e)
 out.println("error in loading data");
 out.println(e);
 }
-
+%>
+<p>Donor</p>
+<table border="1">
+<tr>
+<td>Donor ID</td>
+<td>Donor Name</td>
+<td>Donor Gender</td>
+<td>Donor Address</td>
+<td>Date Of Donation</td>
+<td>Quantity Donated</td>
+<td>Donor Contact</td>
+<td>Donor Blood Group</td>
+</tr>
 </table>
 <a href="menu.html">Go Back To Menu</a>
 </center>
