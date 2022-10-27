@@ -17,6 +17,7 @@
 <form method="get" action="donoraction.jsp">
 
 Date:<input type="date" name="date" /><br><br>
+Quantity(ml):<input type="number" name="quantity" /><br><br>
 Blood Group:
 <select name="bg">
 <option>A+</option>
