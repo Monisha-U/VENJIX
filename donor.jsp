@@ -48,8 +48,6 @@ catch(Exception e)
 out.println(e);
 }
 %>
-<input type="submit" value="Submit" />
-<input type="reset" value="Cancel" />
 </form><br><br>
 <a href="menu.html">Go Back To Menu</a>
 </center>
