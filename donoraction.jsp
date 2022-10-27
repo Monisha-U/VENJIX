@@ -53,6 +53,33 @@ out.println(e);
 <td>Donor Contact</td>
 <td>Donor Blood Group</td>
 </tr>
+<%
+try{
+	Class.forName("com.mysql.jdbc.Driver").newInstance();
+    java.sql.Connection connect = DriverManager.getConnection
+    ("jdbc:mysql://localhost:3306/bloodbank?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false","root","");
+    Statement fetchdata = connect.createStatement();
+    String sqlquery = "select * from donor";
+    ResultSet displaydata = fetchdata.executeQuery(sqlquery);
+    while(displaydata.next())
+    {%>
+    <tr>
+    <td><%=displaydata.getString("id") %></td>
+    <td><%=displaydata.getString("name") %></td>
+    <td><%=displaydata.getString("gender") %></td>
+    <td><%=displaydata.getString("address") %></td>
+    <td><%=displaydata.getString("date") %></td>
+    <td><%=displaydata.getString("quantity") %></td>
+    <td><%=displaydata.getString("contact") %></td>
+    <td><%=displaydata.getString("bg") %></td>
+    </tr>
+    <%
+    }
+}catch(Exception e)
+{
+	out.println(e);
+}
+%>
 </table>
 <a href="menu.html">Go Back To Menu</a>
 </center>
