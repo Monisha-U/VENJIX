@@ -69,8 +69,8 @@ try{
     <td><%=displaydata.getString("id") %></td>
     <td><%=displaydata.getString("receivername") %></td>
     <td><%=displaydata.getString("gender") %></td>
-    <td><%=displaydata.getString("address") %></td>
-    <td><%=displaydata.getString("date") %></td>
+    <td><%=displaydata.getString("address") %></td> 
+    <td><%=displaydata.getString("date") %></td> 
     <td><%=displaydata.getString("quantity") %></td>
     <td><%=displaydata.getString("contact") %></td>
     <td><%=displaydata.getString("bg") %></td>
