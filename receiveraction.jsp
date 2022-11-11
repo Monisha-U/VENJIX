@@ -74,6 +74,8 @@ try{
     <td><%=displaydata.getString("quantity") %></td>
     <td><%=displaydata.getString("contact") %></td>
     <td><%=displaydata.getString("bg") %></td>
+	
+	
     </tr>
     <%
     }
