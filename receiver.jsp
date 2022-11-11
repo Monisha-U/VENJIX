@@ -13,6 +13,7 @@
 <p style="text-align:center;"><img style="width:15%;height:15%;" src="logo16.jpg">
 <center>
 <form method="post" action="receiveraction.jsp">
+Date:<input type="date" name="receiverdate" /><br><br>
 Blood Group:
 <select name="receiverbg">
 <option>A+</option>
