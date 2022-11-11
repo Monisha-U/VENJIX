@@ -63,6 +63,7 @@ try{
     <tr>
     <td><%=displaydata.getString("receivername") %></td>
     <td><%=displaydata.getString("gender") %></td>
+    <td><%=displaydata.getString("contact") %></td>
     </tr>
     <%
     }
