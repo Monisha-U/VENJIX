@@ -19,7 +19,6 @@ String raddress = request.getParameter("receiveraddress");
 String rdate = request.getParameter("receiverdate");
 String rcontact = request.getParameter("receivercontact");
 String rbg = request.getParameter("receiverbg");
-String docid = request.getParameter("docidlist");
 String quantity = request.getParameter("quantity");
 try{
     Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -35,7 +34,6 @@ try{
     preparestatement.setString(6,quantity);
     preparestatement.setString(7,rcontact);
     preparestatement.setString(8,rbg);
-    preparestatement.setString(9,docid);
     preparestatement.execute();
 	}
 catch(SQLException e)
@@ -47,8 +45,15 @@ out.println(e);
 <p>Receiver</p>
 <table border="1">
 <tr>
+<td>Receiver ID</td>
 <td>Receiver Name</td>
 <td>Receiver Gender</td>
+<td>Receiver Address</td>
+<td>Receiving Date</td>
+<td>Quantity Received</td>
+<td>Receiver Contact</td>
+<td>Receiver Blood Group</td>
+<td>Doctorid</td>
 </tr>
 <%
 try{
@@ -61,8 +66,12 @@ try{
     while(displaydata.next())
     {%>
     <tr>
+    <td><%=displaydata.getString("id") %></td>
     <td><%=displaydata.getString("receivername") %></td>
     <td><%=displaydata.getString("gender") %></td>
+    <td><%=displaydata.getString("address") %></td>
+    <td><%=displaydata.getString("date") %></td>
+    <td><%=displaydata.getString("quantity") %></td>
     <td><%=displaydata.getString("contact") %></td>
     <td><%=displaydata.getString("bg") %></td>
     </tr>
