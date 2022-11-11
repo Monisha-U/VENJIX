@@ -13,6 +13,7 @@
 <p style="text-align:center;"><img style="width:15%;height:15%;" src="logo16.jpg">
 <center>
 <form method="post" action="receiveraction.jsp">
+Name:<input type="text" name="receivername" /><br><br>
 Date:<input type="date" name="receiverdate" /><br><br>
 Gender:<input type="text" name="receivergender" /><br><br>
 Quantity(ml):<input type="number" name="quantity" /><br><br>
