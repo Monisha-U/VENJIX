@@ -64,6 +64,7 @@ try{
     <td><%=displaydata.getString("receivername") %></td>
     <td><%=displaydata.getString("gender") %></td>
     <td><%=displaydata.getString("contact") %></td>
+    <td><%=displaydata.getString("bg") %></td>
     </tr>
     <%
     }
