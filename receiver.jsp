@@ -17,6 +17,7 @@ Name:<input type="text" name="receivername" /><br><br>
 Date:<input type="date" name="receiverdate" /><br><br>
 Gender:<input type="text" name="receivergender" /><br><br>
 Quantity(ml):<input type="number" name="quantity" /><br><br>
+Contact:<input type="number" name="receivercontact" /><br><br>
 Blood Group:
 <select name="receiverbg">
 <option>A+</option>
@@ -28,22 +29,6 @@ Blood Group:
 <option>O-</option>
 <option>O+</option>
 </select><br><br>
-<%
-ResultSet doctorid=null;
-try{
-Class.forName("com.mysql.jdbc.Driver").newInstance();
-java.sql.Connection con = DriverManager.getConnection
-("jdbc:mysql://localhost:3306/bloodbank?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false","root","");
-Statement fetchdoctorname=con.createStatement() ;
-doctorid=fetchdoctorname.executeQuery("select id from doctor");
-%>
-Select Doctor id:
-<select name="docidlist">
-<%  while(doctorid.next()){ %>
-<option><%= doctorid.getString(1)%></option>
-<% } %>
-</select><br><br>
-<%
 }
 catch(Exception e)
 {
