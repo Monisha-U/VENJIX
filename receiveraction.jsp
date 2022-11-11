@@ -44,6 +44,34 @@ out.println("error in loading data");
 out.println(e);
 }
 %>
+<p>Receiver</p>
+<table border="1">
+<tr>
+<td>Receiver Name</td>
+<td>Receiver Gender</td>
+</tr>
+<%
+try{
+	Class.forName("com.mysql.jdbc.Driver").newInstance();
+    java.sql.Connection connect = DriverManager.getConnection
+    ("jdbc:mysql://localhost:3306/bloodbank?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false","root","");
+    Statement fetchdata = connect.createStatement();
+    String sqlquery = "select * from receiver";
+    ResultSet displaydata = fetchdata.executeQuery(sqlquery);
+    while(displaydata.next())
+    {%>
+    <tr>
+    <td><%=displaydata.getString("receivername") %></td>
+    <td><%=displaydata.getString("gender") %></td>
+    </tr>
+    <%
+    }
+}catch(Exception e)
+{
+	out.println(e);
+}
+%>
+</table>
 <a href="menu.html">Go Back To Menu</a>
 </center>
 </body>
