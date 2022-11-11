@@ -16,6 +16,9 @@
 Name:<input type="text" name="receivername" /><br><br>
 Date:<input type="date" name="receiverdate" /><br><br>
 Gender:<input type="text" name="receivergender" /><br><br>
+Address:<input type="text" name="receiveraddress" /><br><br>
+
+
 Quantity(ml):<input type="number" name="quantity" /><br><br>
 Blood Group:
 <select name="receiverbg">
