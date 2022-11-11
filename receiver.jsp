@@ -14,6 +14,7 @@
 <center>
 <form method="post" action="receiveraction.jsp">
 Date:<input type="date" name="receiverdate" /><br><br>
+Quantity(ml):<input type="number" name="quantity" /><br><br>
 Blood Group:
 <select name="receiverbg">
 <option>A+</option>
