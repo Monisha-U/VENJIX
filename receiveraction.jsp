@@ -44,6 +44,19 @@ out.println("error in loading data");
 out.println(e);
 }
 %>
+<p>Receiver</p>
+<table border="1">
+<tr>
+<td>Receiver ID</td>
+<td>Receiver Name</td>
+<td>Receiver Gender</td>
+<td>Receiver Address</td>
+<td>Receiving Date</td>
+<td>Quantity Received</td>
+<td>Receiver Contact</td>
+<td>Receiver Blood Group</td>
+<td>Doctorid</td>
+</tr>
 <a href="menu.html">Go Back To Menu</a>
 </center>
 </body>
