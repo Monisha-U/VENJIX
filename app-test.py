@@ -23,7 +23,17 @@ class TestAPI(unittest.TestCase):
     def test_getdonors_noOfRows_not_null(self):
         response = self.app.get('/getdonors')
         self.assertTrue(response)
-        print("Test Get Donors Api Call With Returned Rows") 
+        print("Test Get Donors Api Call With Returned Rows")
+
+    def test_getdoctors_noOfRows_not_null(self):
+        response = self.app.get('/getdoctors')
+        self.assertTrue(response)
+        print("Test Get Doctors Api Call With Returned Rows") 
+
+    def test_postdoctors(self):
+        response = pip._vendor.requests.post(self.URL,json=self.data)
+        self.assertEqual(response.status_code, 200) 
+        print("Test Post Doctors Api Call ")
 
    
 if __name__ == '__main__':
