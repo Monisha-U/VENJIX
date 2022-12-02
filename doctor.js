@@ -16,6 +16,7 @@ const Doctor = () => {
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
   };
+  //operation to insert new doctor record 
   const handleSumbit = (e) => {
     e.preventDefault();
     axios
