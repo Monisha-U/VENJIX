@@ -48,7 +48,8 @@ const Inventory = () => {
               <option value="O-">O-</option>
             </select>
           </div>
-          <div className="form-group">
+
+                    <div className="form-group">
             <label htmlFor="quantity">Quantity(in ml):</label>
             <input
               type="number"
@@ -62,7 +63,7 @@ const Inventory = () => {
           </div>
           <br></br>
           <br></br>
-          <input type="submit" className="btn btn-primary" value="Submit" />
+<input type="submit" className="btn btn-primary" value="Submit" />
           &nbsp;&nbsp;
           <input type="reset" className="btn btn-danger" value="Cancel" />
           <br></br>

@@ -16,7 +16,6 @@ const Doctor = () => {
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
   };
-  //operation to insert new doctor record 
   const handleSumbit = (e) => {
     e.preventDefault();
     axios
@@ -35,9 +34,7 @@ const Doctor = () => {
       <p style={{ textAlign: "center" }}>
         <img style={{ width: "15%", height: "15%" }} src={logo15} />
       </p>
-      {/* //user can provide the doctor's information like name,address and contact */}
       <center>
-          
         <form onSubmit={(event) => handleSumbit(event)} style={{"width":"25%"}}>
         <div className="form-group">
         <label htmlFor="doctorname">Name:</label>
@@ -60,18 +57,7 @@ const Doctor = () => {
             onChange={(event) => handleAddressChange(event)}
             required
           />
-          </div>
-          <div className="form-group">
-          <label htmlFor="contact">Contact:</label>
-          <input
-            type="text"
-            value={phone}
-            className="form-control"
-            id="contact" maxLength="10"
-            onChange={(event) => handlePhoneChange(event)}
-            required
-          />
-          </div>
+</div>
           <br></br>
           <br></br>
           <input type="submit" className="btn btn-primary" value="Submit" />&nbsp;&nbsp;
@@ -81,6 +67,18 @@ const Doctor = () => {
         </form>
       </center>
     </div>
+          </div>
+          <div className="form-group">
+          <label htmlFor="contact">Contact:</label>
+          <input
+            type="text"
+            value={phone}
+            className="form-control"
+            id="contact"
+            onChange={(event) => handlePhoneChange(event)}
+            required
+          />
+          
   );
 };
 export default Doctor;
