@@ -49,7 +49,25 @@ const Inventory = () => {
             </select>
           </div>
 
-         
+                    <div className="form-group">
+            <label htmlFor="quantity">Quantity(in ml):</label>
+            <input
+              type="number"
+              min="0"
+              value={quantity}
+              className="form-control"
+              id="quantity"
+              onChange={(event) => handleQuantity(event)}
+              required
+            />
+          </div>
+          <br></br>
+          <br></br>
+<input type="submit" className="btn btn-primary" value="Submit" />
+          &nbsp;&nbsp;
+          <input type="reset" className="btn btn-danger" value="Cancel" />
+          <br></br>
+         <Link to='/Home'>Go Back To Menu</Link>
         </form>
       </center>
     </div>
