@@ -35,6 +35,16 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200) 
         print("Test Post Doctors Api Call ")
 
+    def test_getreceiver_status_code(self):
+        response = self.app.get('/getreceiver')
+        self.assertEqual(response.status_code, 200)  
+        print("Test Get Receiver Api Call")
+
+    def test_getreceiver_noOfRows_not_null(self):
+        response = self.app.get('/getreceiver')
+        self.assertTrue(response)   
+        print("Test Get Receiver Api Call With Returned Rows") 
+
    
 if __name__ == '__main__':
     unittest.main()
