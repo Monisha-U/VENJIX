@@ -57,6 +57,16 @@ const Doctor = () => {
             onChange={(event) => handleAddressChange(event)}
             required
           />
+</div>
+          <br></br>
+          <br></br>
+          <input type="submit" className="btn btn-primary" value="Submit" />&nbsp;&nbsp;
+          <input type="reset" className="btn btn-danger"  value="Cancel" />
+          <br></br>
+          <Link to='/Home'>Go Back To Menu</Link>
+        </form>
+      </center>
+    </div>
           </div>
           <div className="form-group">
           <label htmlFor="contact">Contact:</label>
@@ -68,16 +78,7 @@ const Doctor = () => {
             onChange={(event) => handlePhoneChange(event)}
             required
           />
-          </div>
-          <br></br>
-          <br></br>
-          <input type="submit" className="btn btn-primary" value="Submit" />&nbsp;&nbsp;
-          <input type="reset" className="btn btn-danger"  value="Cancel" />
-          <br></br>
-          <Link to='/Home'>Go Back To Menu</Link>
-        </form>
-      </center>
-    </div>
+          
   );
 };
 export default Doctor;
