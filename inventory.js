@@ -62,11 +62,7 @@ const Inventory = () => {
           </div>
           <br></br>
           <br></br>
-          <input type="submit" className="btn btn-primary" value="Submit" />
-          &nbsp;&nbsp;
-          <input type="reset" className="btn btn-danger" value="Cancel" />
-          <br></br>
-         <Link to='/Home'>Go Back To Menu</Link>
+         
         </form>
       </center>
     </div>
