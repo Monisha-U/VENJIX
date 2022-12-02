@@ -4,6 +4,7 @@ import { useNavigate,Link } from "react-router-dom";
 const DoctorsList = () => {
   const [doctors, setDoctors] = useState([]);
   const navigate = useNavigate();
+ // operation to delete doctor's record
   const handleDelete = (event, param) => {
     console.log(param);
     axios
@@ -40,6 +41,7 @@ const DoctorsList = () => {
                       value="Add New Doctor"
                       onClick={(event) => handleAdd(event)}
                     />
+   // a table to display the list of doctor's information                 
         <table class="table">
           <thead>
             <tr>
