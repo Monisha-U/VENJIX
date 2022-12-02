@@ -24,7 +24,10 @@ const Donor = () => {
     {
      donor.bloodgroup = "A+"
     }
-    
+    if(!donor.gender)
+    {
+     donor.gender = "Male"
+    }
     e.preventDefault();
     axios
     .post('/createdonor', donor, {
@@ -76,13 +79,10 @@ const Donor = () => {
           </div>
           <div className="form-group">
           <label htmlFor="gender">Gender:</label>
-          <input
-            type="text"
-            className="form-control"
-            id="gender"
-            onChange={e => setDonor({ ...donor, gender: e.target.value })}
-            required
-          />
+          <select id="gender" className="form-control" required   onChange={(event) => handlegender(event)}>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
           </div>
           <div className="form-group">
           <label htmlFor="contact">Address:</label>
@@ -109,7 +109,7 @@ const Donor = () => {
           <input
             type="text"
             className="form-control"
-            id="contact" 
+            id="contact" maxLength="10"
             onChange={e => setDonor({ ...donor, contact: e.target.value })}
             required
           />
