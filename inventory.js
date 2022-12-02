@@ -48,20 +48,7 @@ const Inventory = () => {
               <option value="O-">O-</option>
             </select>
           </div>
-          <div className="form-group">
-            <label htmlFor="quantity">Quantity(in ml):</label>
-            <input
-              type="number"
-              min="0"
-              value={quantity}
-              className="form-control"
-              id="quantity"
-              onChange={(event) => handleQuantity(event)}
-              required
-            />
-          </div>
-          <br></br>
-          <br></br>
+
          
         </form>
       </center>
