@@ -1,6 +1,0 @@
-FROM
-Java:latest
-            
-            WORKDIR C:\Users\vamsh\IdeaProjects\bbm_test\out\production\bbm_test\bbmtest
-            COPY testcase1.java ./
-            CMD [ "Java" , "./testcase1.java"]
