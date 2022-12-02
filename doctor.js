@@ -67,7 +67,7 @@ const Doctor = () => {
             type="text"
             value={phone}
             className="form-control"
-            id="contact"
+            id="contact" maxLength="10"
             onChange={(event) => handlePhoneChange(event)}
             required
           />
