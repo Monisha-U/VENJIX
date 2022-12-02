@@ -35,7 +35,9 @@ const Doctor = () => {
       <p style={{ textAlign: "center" }}>
         <img style={{ width: "15%", height: "15%" }} src={logo15} />
       </p>
+      {/* //user can provide the doctor's information like name,address and contact */}
       <center>
+          
         <form onSubmit={(event) => handleSumbit(event)} style={{"width":"25%"}}>
         <div className="form-group">
         <label htmlFor="doctorname">Name:</label>
@@ -65,7 +67,7 @@ const Doctor = () => {
             type="text"
             value={phone}
             className="form-control"
-            id="contact"
+            id="contact" maxLength="10"
             onChange={(event) => handlePhoneChange(event)}
             required
           />
