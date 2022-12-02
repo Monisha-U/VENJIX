@@ -55,7 +55,7 @@ const InventoryList = () => {
                 <tr key={index}>
                   <th scope="row">{index + 1}</th>
                   <td>{doctor.id}</td>
-                  <td>{doctor.id}</td>
+                  <td>{doctor.bgname}</td>
                   <td>{doctor.quantity}</td>
                   <input
                       type="button"
